@@ -1,0 +1,30 @@
+<link rel="styleSheet" href="/css/home.css">
+
+<!-- include form-section -->
+<div id="addList">
+    <%- include('_toDo'); -%>
+</div>
+<hr>
+
+<!-- add container to show the user data -->
+
+<div id="toDo-container">
+    <ul>
+        <% for(list of lists){%>
+            <li id="list-<%= list.id %>" class="list-container">
+                <div class="main-content">
+                    <div class="desc-container">
+                        <input type="checkbox" id="<%=list._id %>" class="checkBox">
+                        <p><%= list.description %></p>
+                     </div>
+                     <div class="date-time-container">
+                        
+                        <p><i class="far fa-clock"></i><%= list.duetime %></p>
+                     </div>
+                    
+                </div>
+                <div class="category-conatiner"><%= list.category %></div>
+            </li>
+        <% } %>
+    </ul>
+</div>

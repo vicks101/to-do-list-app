@@ -1,0 +1,41 @@
+<!-- create a form to fill the details -->
+<form action="/users/create" method="POST" id="new-todo-form">
+    <!-- store the description -->
+    <div class="form-group">
+        <label for="describe">DESCRIPTION</label>
+        <input type="text" name="description" id="describe" placeholder="What do you need to do ?" required>
+    </div>
+    <hr>
+    <!-- select the category -->
+    <div class="form-group">
+        <label for="category">CATEGORY</label>
+        <select name="category" id="category" required>
+            <option value="" selected>Choose a Category</option>
+            <option value="SCHOOL">School</option>
+            <option value="WORK">Work</option>
+            <option value="SHOPPING">Shopping</option>
+            <option value="GROCERY">Grocery</option>
+            <option value="PERSONAL">Personal</option>
+            <option value="EVENT">Event</option>
+            <option value="OTHERS">Other</option>
+        </select>
+    </div>
+    <hr>
+    <!-- fill the info of date and time -->
+    <div id="time_date_container">
+        <div class="form-group" id="inline-date">
+            <label for="date">DUE DATE</label>
+            <input type="date" name="duedate" id="date" placeholder="MM/DD/YYYY"  required>
+        </div>
+        <div class="form-group" id="inline-time">
+            <label for="time">DUE TIME</label>
+            <input type="time" id="time" name="duetime" >
+        </div>
+    </div>
+   
+    <hr>
+    <!-- finally submit button -->
+    <div class="form-group">
+        <input type="submit" value="ADD TASK">
+    </div>
+</form>

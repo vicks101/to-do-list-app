@@ -1,0 +1,16 @@
+header {
+  padding: 15px 5px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  header h2 {
+    color: darkorange; }
+  header #delete-btn {
+    padding: 5px;
+    cursor: pointer;
+    background-color: cyan; }
+    header #delete-btn a {
+      color: #111111;
+      text-decoration: none;
+      font-weight: 600; }

@@ -1,0 +1,88 @@
+main {
+  background-color: lightgray;
+  padding: 1rem 0 0.2rem; }
+
+#addList {
+  width: 40rem;
+  margin: auto;
+  padding: 5px;
+  background-color: white; }
+  #addList .form-group {
+    margin: 0.5rem; }
+    #addList .form-group label {
+      display: block; }
+    #addList .form-group input {
+      display: block;
+      border: none;
+      outline: none; }
+    #addList .form-group select {
+      display: block;
+      border: none;
+      outline: none; }
+    #addList .form-group input[type="submit"] {
+      background-color: green;
+      color: white;
+      padding: 5px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 8rem;
+      margin: auto; }
+  #addList #describe {
+    padding: 5px;
+    width: 100%;
+    font-size: 1.5rem; }
+  #addList #category {
+    padding: 5px;
+    font-size: 1rem;
+    width: 15rem; }
+  #addList #time_date_container {
+    display: flex;
+    justify-content: space-around; }
+
+#toDo-container {
+  width: 40rem;
+  height: 22rem;
+  margin: 1rem auto;
+  overflow-y: scroll;
+  padding: 5px;
+  background-color: white; }
+  #toDo-container ul {
+    display: flex;
+    flex-direction: column; }
+    #toDo-container ul .list-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding-top: 8px; }
+    #toDo-container ul .main-content {
+      display: flex;
+      flex-direction: column; }
+      #toDo-container ul .main-content .desc-container {
+        display: flex;
+        margin-bottom: 0.5rem;
+        align-items: center;
+        width: 32rem; }
+        #toDo-container ul .main-content .desc-container input {
+          margin-right: 1.5rem;
+          zoom: 1.5; }
+        #toDo-container ul .main-content .desc-container p {
+          text-align: justify;
+          word-wrap: break-word;
+          font-size: 1.1rem; }
+      #toDo-container ul .main-content .date-time-container {
+        display: flex; }
+        #toDo-container ul .main-content .date-time-container p {
+          color: gray;
+          margin: 0 0.5rem 0 3.5rem; }
+          #toDo-container ul .main-content .date-time-container p i {
+            margin-right: 8px; }
+  #toDo-container .category-conatiner {
+    padding: 9px;
+    background-color: purple;
+    color: white;
+    width: 6rem;
+    text-align: center; }
+
+#toDo-container::-webkit-scrollbar {
+  display: none; }

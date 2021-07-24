@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="styleSheet" href="/css/layout.css">
+    <link rel="styleSheet" href="/css/header.css">
+    <%- style%>
+</head>
+<body>
+    <!-- include header -->
+    <%- include('_header'); -%>
+    <main>
+        <%- body%>
+    </main>
+    <script src="/js/layout.js"></script>
+    
+    <!-- use for noty to notify -->
+    <script>
+        <% if(flash.success && flash.success.length>0){%>
+            new Noty({
+                theme:'relax',
+                text: "<%= flash.success%>",
+                type : 'success',
+                layout: 'topRight',
+                timeout: 500
+            }).show();
+        <%}%>
+        <% if(flash.error && flash.error.length>0){%>
+            new Noty({
+                theme:'relax',
+                text: "<%= flash.error%>",
+                type : 'error',
+                layout: 'topRight',
+                timeout: 500
+            }).show();
+        <% } %>
+    </script>
+</body>
+</html>
